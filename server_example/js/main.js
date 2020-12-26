@@ -35,4 +35,8 @@ $(document).on('keypress',function(e) {
 		console.log("d")
 		controlBtnActive($("#control_right"))
 	}
+	if(e.keyCode == 13){
+		console.log("enter")
+		controlBtnActive($("#control_enter"))
+	}
 });
