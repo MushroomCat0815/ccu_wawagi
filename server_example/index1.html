@@ -1,38 +1,101 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-<title>Simple Demo</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
-<script type="text/javascript" charset="utf-8">
-    $(document).ready(function() {
-    var url = 'http://192.168.1.124';
-    var port = '5001';
-    var socket = io.connect(url + ':' + port);
-    socket.on('connect', function() {
-    socket.emit('connect_event', {data: 'test connected!'});})
-    socket.on('server_response', function(msg) {
-    $('#log').append('<br>' + $('<div/>').text('Received #' + ': ' + msg.data).html());});
-    $('form#emit').submit(function(event) {
-    socket.emit('client_stop', {data: $('#emit_data').val()});
-    location.reload();
-    return false;
-    });
-    $('#text').keypress(function(e){
-          $('#text').val('');
-          socket.emit('client_event', {
-            data : String.fromCharCode(e.charCode)
-          });});
-    });
-</script>
-</head>
-<body>
-    <h2>Input your command</h2>
-    <textarea id="text" cols="5" style="font-size: 36px;"></textarea>
-    <form id="emit" method="POST" action='#'>
-    <textarea cols="50" rows="5" name="emit_data" id="emit_data" placeholder="Code"></textarea>
-    <input type="submit" value="Run">
-    </form>
-    <div id='log'></div>
-    </body>
+	<head>
+		<title>Simple Demo</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+		<link rel="stylesheet" href="./css/main.css" />
+		<script src="./js/socket.js"></script>
+		<script src="./js/main.js"></script>
+	</head>
+	<body>
+		<div class="main-wrap">
+			<div class="web-title">
+				<h2>中正娃娃機</h2>
+			</div>
+			<div class="img-wrap">
+				<div class="image"></div>
+			</div>
+
+			<div class="control-wrap">
+				<div class="move-wrap">
+					<div class="top-wrap">
+						<div class="button-wrap">
+							<button id="control_up">↑</button>
+						</div>
+					</div>
+					<div class="bottom-wrap">
+						<div class="button-wrap">
+							<button id="control_left">←</button>
+						</div>
+						<div class="button-wrap">
+							<button id="control_down">↓</button>
+						</div>
+						<div class="button-wrap">
+							<button id="control_right">→</button>
+						</div>
+					</div>
+				</div>
+				<div class="catch-wrap">
+					<div class="button-wrap">
+						<button>抓</button>
+					</div>
+				</div>
+			</div>
+			<div class="text-board-wrap">
+				<div class="board-title">
+					<h3>留言板</h3>
+				</div>
+				<textarea name="" id="textboard_text" class="text-board">真是太好玩了!!</textarea>
+				<div class="button-wrap">
+					<input id="textboard_submit" type="submit" value="發送" />
+				</div>
+				<div class="board-show-wrap">
+					<div class="show-item-wrap">
+						<div class="show-item">
+							<div class="item-user">
+								user1010
+							</div>
+							<div class="context">
+								好好玩
+							</div>
+						</div>
+					</div>
+					<div class="show-item-wrap">
+						<div class="show-item">
+							<div class="item-user">
+								user1010
+							</div>
+							<div class="context">
+								真的太好玩了
+							</div>
+						</div>
+					</div>
+					<div class="show-item-wrap">
+						<div class="show-item">
+							<div class="item-user">
+								user1010
+							</div>
+							<div class="context">
+								真的真的真的真的真的真的真的好好玩
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<textarea class="command-text" id="text" cols="5"></textarea>
+			<form id="emit" method="POST" action="#">
+				<div class="command-textarea">
+					<textarea cols="50" rows="5" name="emit_data" id="emit_data" placeholder="Code"></textarea>
+					<div class="button-wrap">
+						<input type="submit" value="Run" />
+					</div>
+				</div>
+			</form>
+			<div class="log-wrap">
+				<div id="log"></div>
+			</div>
+		</div>
+	</body>
 </html>
