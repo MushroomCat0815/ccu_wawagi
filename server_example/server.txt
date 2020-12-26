@@ -1,0 +1,22 @@
+server端建立
+*prepare : install python on windows10
+
+一、安裝相關library(我是在Anaconda環境下安裝)
+pip install Flask-SocketIO
+pip install eventlet
+
+二、建立後端程式與前端網頁
+後端server : app.py
+前端web	   : index.html
+
+三、server端與esp32建tcp socket
+app.py : 同時包含web socket和 tcp socket
+
+html javascript api:
+socket.on(事件,function())
+socket.emit(事件,data)  // python端 : emit(事件,data)
+
+詳細請看sample code
+
+參考:
+https://medium.com/@charming_rust_oyster_221/%E4%BD%BF%E7%94%A8-flask-socketio-%E5%AE%8C%E6%88%90-websocket-%E9%9B%99%E5%90%91%E9%80%9A%E8%A8%8A-49fd734f52ae

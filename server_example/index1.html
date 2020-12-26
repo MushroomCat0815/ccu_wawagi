@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Simple Demo</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+    var url = 'http://192.168.1.124';
+    var port = '5001';
+    var socket = io.connect(url + ':' + port);
+    socket.on('connect', function() {
+    socket.emit('connect_event', {data: 'test connected!'});})
+    socket.on('server_response', function(msg) {
+    $('#log').append('<br>' + $('<div/>').text('Received #' + ': ' + msg.data).html());});
+    $('form#emit').submit(function(event) {
+    socket.emit('client_stop', {data: $('#emit_data').val()});
+    location.reload();
+    return false;
+    });
+    $('#text').keypress(function(e){
+          $('#text').val('');
+          socket.emit('client_event', {
+            data : String.fromCharCode(e.charCode)
+          });});
+    });
+</script>
+</head>
+<body>
+    <h2>Input your command</h2>
+    <textarea id="text" cols="5" style="font-size: 36px;"></textarea>
+    <form id="emit" method="POST" action='#'>
+    <textarea cols="50" rows="5" name="emit_data" id="emit_data" placeholder="Code"></textarea>
+    <input type="submit" value="Run">
+    </form>
+    <div id='log'></div>
+    </body>
+</html>
