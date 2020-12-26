@@ -47,6 +47,9 @@ body .main-wrap .control-wrap .move-wrap .button-wrap button {
   outline: none;
   box-shadow: 2px 2px 2px #888;
 }
+body .main-wrap .control-wrap .move-wrap .button-wrap button:hover {
+  background-color: #ffa3a3;
+}
 body .main-wrap .control-wrap .move-wrap .button-wrap button.active {
   background-color: #ffa3a3;
 }
@@ -62,6 +65,9 @@ body .main-wrap .control-wrap .catch-wrap .button-wrap button {
   box-shadow: 2px 2px 2px #888;
 }
 body .main-wrap .control-wrap .catch-wrap .button-wrap button:hover {
+  background-color: #ffa3a3;
+}
+body .main-wrap .control-wrap .catch-wrap .button-wrap button.active {
   background-color: #ffa3a3;
 }
 body .main-wrap .text-board-wrap {
