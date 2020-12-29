@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	console.log('test');
 	$('#textboard_submit').on('click', function () {
-		var a=profile.getName();
+		var a=1;
 		console.log(a);
 		console.log($('#textboard_text').val());
 		$('.board-show-wrap').append(
