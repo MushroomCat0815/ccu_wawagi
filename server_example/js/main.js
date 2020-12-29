@@ -1,5 +1,6 @@
 $(document).ready(function () {
 	var a=profile.getName();
+	console.log(a);
 	console.log('test');
 	$('#textboard_submit').on('click', function () {
 		console.log($('#textboard_text').val());
