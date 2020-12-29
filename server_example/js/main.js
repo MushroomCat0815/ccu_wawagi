@@ -1,9 +1,10 @@
 $(document).ready(function () {
+	var a=profile.getName();
 	console.log('test');
 	$('#textboard_submit').on('click', function () {
 		console.log($('#textboard_text').val());
 		$('.board-show-wrap').append(
-			"<div class='show-item-wrap'><div class='show-item'><div class='item-user'>user1010</div><div class='context'>"+ $('#textboard_text').val() +"</div></div></div>"
+			"<div class='show-item-wrap'><div class='show-item'><div class='item-user'>a</div><div class='context'>"+ $('#textboard_text').val() +"</div></div></div>"
 		);
 		$('#textboard_text').val("");
 		;
