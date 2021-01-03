@@ -6,7 +6,7 @@ $(document).ready(function () {
 			"<div class='show-item-wrap'><div class='show-item'><div class='item-user'>a</div><div class='context'>"+ $('#textboard_text').val() +"</div></div></div>"
 		);
 		$('#textboard_text').val("");
-		$(".item-user+").text('hello');
+		$('#user1').text('hello');
 		;
 	});
 
