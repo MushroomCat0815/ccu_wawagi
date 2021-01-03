@@ -1,13 +1,12 @@
 $(document).ready(function () {
 	console.log('test');
 	$('#textboard_submit').on('click', function () {
-		var a=1;
-		console.log(a);
 		console.log($('#textboard_text').val());
 		$('.board-show-wrap').append(
 			"<div class='show-item-wrap'><div class='show-item'><div class='item-user'>a</div><div class='context'>"+ $('#textboard_text').val() +"</div></div></div>"
 		);
 		$('#textboard_text').val("");
+		$("#item-user").text(a);
 		;
 	});
 
