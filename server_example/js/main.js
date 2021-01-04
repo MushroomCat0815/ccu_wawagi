@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	var profile = googleUser.getBasicProfile();
 	console.log('tttt');
 	$('#textboard_submit').on('click', function () {
 		console.log($('#textboard_text').val());
@@ -7,16 +8,13 @@ $(document).ready(function () {
 		);
 		$('#textboard_text').val("");
 		console.log($('#user1').text());
+		console.log(profile);
+		console.log(123)
 		;
 	});
 
-	var profile = googleUser.getBasicProfile();
+	
 	console.log(profile, "profile");
-
-	$("#control_enter").on('click', function() {
-		console.log(profile);
-		console.log(123)
-	})
 
 	
 });
