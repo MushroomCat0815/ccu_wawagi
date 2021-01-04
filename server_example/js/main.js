@@ -13,9 +13,8 @@ $(document).ready(function () {
 	var profile = googleUser.getBasicProfile();
 	console.log(profile, "profile");
 
-	$(".image").onclick(function() {
+	$(".image").on('click', function() {
 		console.log(profile);
-		
 	})
 
 	
