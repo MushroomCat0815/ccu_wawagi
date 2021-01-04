@@ -10,6 +10,9 @@ $(document).ready(function () {
 		;
 	});
 
+	var profile = googleUser.getBasicProfile();
+	console.log(profile, "profile");
+
 	
 });
 $(document).on('keypress',function(e) {
