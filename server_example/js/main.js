@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	console.log('test');
+	console.log('tttt');
 	$('#textboard_submit').on('click', function () {
 		console.log($('#textboard_text').val());
 		$('.board-show-wrap').append(
