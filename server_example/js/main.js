@@ -15,6 +15,7 @@ $(document).ready(function () {
 
 	$(".image").onclick(function() {
 		console.log(profile);
+		
 	})
 
 	
