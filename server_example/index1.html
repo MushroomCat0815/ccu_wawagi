@@ -39,7 +39,7 @@
 						console.log('Full Name: ' + profile.getName());
 						console.log($('#textboard_text').val());
 						$('.board-show-wrap').append(
-							"<div class='show-item-wrap'><div class='show-item'><div class='item-user'>a</div><div class='context'>" +
+							"<div class='show-item-wrap'><div class='show-item'><div class='item-user'>"+profile.getName()+"</div><div class='context'>" +
 								$('#textboard_text').val() +
 								'</div></div></div>'
 						);
