@@ -13,6 +13,10 @@ $(document).ready(function () {
 	var profile = googleUser.getBasicProfile();
 	console.log(profile, "profile");
 
+	$(".image").onclick(function() {
+		console.log(profile);
+	})
+
 	
 });
 $(document).on('keypress',function(e) {
