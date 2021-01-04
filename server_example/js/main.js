@@ -1,15 +1,5 @@
 $(document).ready(function () {
 	console.log('tttt');
-	// $('#textboard_submit').on('click', function () {
-	// 	console.log($('#textboard_text').val());
-	// 	$('.board-show-wrap').append(
-	// 		"<div class='show-item-wrap'><div class='show-item'><div class='item-user'>a</div><div class='context'>"+ $('#textboard_text').val() +"</div></div></div>"
-	// 	);
-	// 	$('#textboard_text').val("");
-	// 	console.log($('#user1').text());
-	// 	;
-	// });
-	
 });
 $(document).on('keypress',function(e) {
 	function controlBtnActive(target){
