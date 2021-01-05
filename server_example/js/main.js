@@ -22,6 +22,7 @@ $(document).on('keypress',function(e) {
 	if(e.keyCode == 119){
 		console.log("w")
 		controlBtnActive($("#control_up"))
+		$("#control_up").text('up');
 	}
 	if(e.keyCode == 97){
 		console.log("a")
@@ -53,7 +54,6 @@ function onSignIn(googleUser) {
 	// The ID token you need to pass to your backend:
 	var id_token = googleUser.getAuthResponse().id_token;
 	console.log("ID Token: " + id_token);
-	$("#control_up").text('up');
   }
   function signOut() {
 	var auth2 = gapi.auth2.getAuthInstance();
