@@ -122,24 +122,7 @@
 
 		 </script>
 	</head>
-	<body>
-		 <h1>留言板</h1>
-
-          <div id="content">
-              <div id="post">
-                  <div style="background:#3EADC5 ;height:30px;">
-                      昵稱：<input type="submit" id="shangtian" name="Submit3" style="border:none; background-color:#3EADC5; color:white;" value="默認用戶點擊改變" onclick="prom()" />
-                      <input type="text" id="ritian" style="border:none; background-color:#3EADC5; color:white;"   onclick="prom()"/>
-                      <!--disabled="disabled"-->
-                  </div>
-                  <div>
-                  <textarea class="transition"></textarea>
-                      </div>
-                  <input id="postBt" type="button" style="border:none; background-color:#3EADC5; color:white;border-radius:5px; width:80px; height:30px;" value="發表留言"/>
-                 <input id="clearBt" type="button" style="border:none; background-color:#3EADC5; color:white;border-radius:5px; width:80px; height:30px;" value="清空"/>
-             </div>
-             <div id="comment"></div>
-              </div>
+	<body>		 
 		<div class="main-wrap">
 			<div class="web-title">
 				<h2>中正娃娃機</h2>
@@ -216,16 +199,25 @@
 					</div>
 				</div>
 			</div>
+			
+			<h1>留言板</h1>
 
-			<textarea class="command-text" id="text" cols="5"></textarea>
-			<form id="emit" method="POST" action="#">
-				<div class="command-textarea">
-					<textarea cols="50" rows="5" name="emit_data" id="emit_data" placeholder="Code"></textarea>
-					<div class="button-wrap">
-						<input type="submit" value="Run" />
-					</div>
-				</div>
-			</form>
+          <div id="content">
+              <div id="post">
+                  <div style="background:#3EADC5 ;height:30px;">
+                      昵稱：<input type="submit" id="shangtian" name="Submit3" style="border:none; background-color:#3EADC5; color:white;" value="默認用戶點擊改變" onclick="prom()" />
+                      <input type="text" id="ritian" style="border:none; background-color:#3EADC5; color:white;"   onclick="prom()"/>
+                      <!--disabled="disabled"-->
+                  </div>
+                  <div>
+                  <textarea class="transition"></textarea>
+                      </div>
+                  <input id="postBt" type="button" style="border:none; background-color:#3EADC5; color:white;border-radius:5px; width:80px; height:30px;" value="發表留言"/>
+                 <input id="clearBt" type="button" style="border:none; background-color:#3EADC5; color:white;border-radius:5px; width:80px; height:30px;" value="清空"/>
+             </div>
+             <div id="comment"></div>
+            </div>
+
 			<div class="log-wrap">
 				<div id="log"></div>
 			</div>
