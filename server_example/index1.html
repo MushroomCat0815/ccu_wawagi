@@ -21,26 +21,6 @@
 				localStorage.removeItem(id);
 				this.Storage.writeData();
 			}
-			function prom() {
-
-				var name = prompt("請輸入您的名字", "");//將輸入的內容賦給變量 name ，
-				named = name;
-				//這里需要注意的是，prompt有兩個參數，前面是提示的話，后面是當對話框出來后，在對話框里的默認值
-
-				if (named)//如果返回的有內容
-
-				{
-
-					alert("歡迎您：" + name)
-					document.getElementById("shangtian").style.display = "none";
-					document.getElementById("ritian").value = named;
-
-				}
-				else {
-					document.getElementById("ritian").value = "匿名發言者";
-				}
-
-			}
 		 var Storage =
 		 {
 			 saveData:function()//保存數據
@@ -228,7 +208,7 @@
           <div id="content">
               <div id="post">
                   <div style="background:#3EADC5 ;height:30px;">                      
-                      <input type="text" id="ritian" style="border:none; background-color:#3EADC5; color:white;"   onclick="prom()"/>
+                      <input type="text" id="ritian" style="border:none; background-color:#3EADC5; color:white;"value="匿名發言者"/>
                       <!--disabled="disabled"-->
                   </div>
                   <div>
