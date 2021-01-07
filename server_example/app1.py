@@ -6,7 +6,7 @@ from flask_socketio import SocketIO, emit
 import socket
 
 HOST = '192.168.1.124'
-PORT = 80 # web port 5001
+PORT = 8010 # web port 5001
 
 
 ###
@@ -74,4 +74,4 @@ def disconnect_msg():
 
 
 if __name__ == '__main__':
-socketio.run(app, debug=True, host='192.168.1.124', port=80)
+socketio.run(app, debug=True, host='192.168.1.124', port=5001)

@@ -2,18 +2,18 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
-		<meta charset="gb2312">
+		<meta charset="utf-8">
 		<title>Simple Demo</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
-		<link rel="stylesheet" href="./server_example/static/css/main.css" />
+		<link rel="stylesheet" href="./static/css/main.css" />
 		<link rel="shortcut icon" href="#">
-		<script src="./server_example/static/js/socket.js"></script>
-		<script src="./server_example/static/js/main.js"></script>
+		<script src="./static/js/socket.js"></script>
+		<script src="./static/js/main.js"></script>
 
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
 		<meta name="google-signin-client_id" content="157054794775-rn6d6qne6gq98q7c6esj271a4msbv8kk.apps.googleusercontent.com">
-		<meta charset="gb2312">     
+		  
            
 		<script type="text/javascript">
 			var named;
@@ -135,8 +135,7 @@
 			<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>			
 			<a class="g-signout2" href="#" onclick="signOut();">Sign out</a>
 			<div class="img-wrap">
-				<iframe width="650" height="600" src="http://127.0.0.1:5000/video_feed1
-" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="image"></div>
 			</div>
 
 			<div class="control-wrap">
@@ -146,6 +145,8 @@
 							<button id="control_up">↑</button>
 						</div>
 					</div>
+
+					
 					<div class="bottom-wrap">
 						<div class="button-wrap">
 							<button id="control_left">←</button>
@@ -158,6 +159,16 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="webcam-wrap">
+					<div class="button-wrap">
+						<button id="webcam_left">左</button>
+					</div>
+					<div class="button-wrap">
+						<button id="webcam_right">右</button>
+					</div>
+				</div>
+
 				<div class="catch-wrap">
 					<div class="button-wrap">
 						<button id="control_enter">抓</button>
@@ -172,8 +183,11 @@
 				<textarea name="" id="textboard_text" class="text-board"></textarea>
 				<div class="button-wrap">
 					<input id="postBt" type="button" value="發送" />
+				</div>
+				<div class="button-wrap">
 					<input id="clearBt" type="button" value="清空" />
-				</div>				
+				</div>	
+						
 			</div>
 			<div class="board-show-wrap">
 				<div class="show-item-wrap">

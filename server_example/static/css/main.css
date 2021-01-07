@@ -53,6 +53,25 @@ body .main-wrap .control-wrap .move-wrap .button-wrap button:hover {
 body .main-wrap .control-wrap .move-wrap .button-wrap button.active {
   background-color: #ffa3a3;
 }
+
+body .main-wrap .control-wrap .webcam-wrap  {
+  display: flex;
+}
+body .main-wrap .control-wrap .button-wrap {
+  padding: 10px;
+}
+
+
+body .main-wrap .control-wrap .webcam-wrap .button-wrap button {
+  font-size: 35px;
+  width: 80px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: rgba(255,163,163,0.4);
+  color: #fff;
+  outline: none;
+  box-shadow: 2px 2px 2px #888;
+}
 body .main-wrap .control-wrap .catch-wrap .button-wrap button {
   font-size: 40px;
   border-radius: 50%;
