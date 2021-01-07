@@ -6,7 +6,7 @@ from flask_socketio import SocketIO, emit
 import socket
 
 HOST = '192.168.1.124'
-PORT = 8010 # web port 5001
+PORT = 80 # web port 5001
 
 
 ###
