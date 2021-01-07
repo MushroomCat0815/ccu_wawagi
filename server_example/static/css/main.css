@@ -53,15 +53,12 @@ body .main-wrap .control-wrap .move-wrap .button-wrap button:hover {
 body .main-wrap .control-wrap .move-wrap .button-wrap button.active {
   background-color: #ffa3a3;
 }
-
-body .main-wrap .control-wrap .webcam-wrap  {
+body .main-wrap .control-wrap .webcam-wrap {
   display: flex;
 }
-body .main-wrap .control-wrap .button-wrap {
+body .main-wrap .control-wrap .webcam-wrap .button-wrap {
   padding: 10px;
 }
-
-
 body .main-wrap .control-wrap .webcam-wrap .button-wrap button {
   font-size: 35px;
   width: 80px;
@@ -71,6 +68,12 @@ body .main-wrap .control-wrap .webcam-wrap .button-wrap button {
   color: #fff;
   outline: none;
   box-shadow: 2px 2px 2px #888;
+}
+body .main-wrap .control-wrap .webcam-wrap .button-wrap button:hover {
+  background-color: #ffa3a3;
+}
+body .main-wrap .control-wrap .webcam-wrap .button-wrap button.active {
+  background-color: #ffa3a3;
 }
 body .main-wrap .control-wrap .catch-wrap .button-wrap button {
   font-size: 40px;
@@ -123,7 +126,34 @@ body .main-wrap .text-board-wrap .button-wrap input {
 body .main-wrap .text-board-wrap .button-wrap input:hover {
   background-color: #ffa3a3;
 }
-
+body .main-wrap .text-board-wrap .board-show-wrap {
+  display: block;
+  padding: 30px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+body .main-wrap .text-board-wrap .board-show-wrap .show-item-wrap {
+  padding: 10px 0;
+}
+body .main-wrap .text-board-wrap .board-show-wrap .show-item-wrap .show-item {
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: rgba(255,163,163,0.2);
+  padding: 20px;
+  min-width: 200px;
+  position: relative;
+  font-size: 24px;
+}
+body .main-wrap .text-board-wrap .board-show-wrap .show-item-wrap .show-item .item-user {
+  position: absolute;
+  top: -12px;
+  left: 15px;
+  font-size: 20px;
+  line-height: 1;
+  background-color: #fff;
+}
 body .main-wrap .command-text {
   resize: none;
   font-size: 36px;
